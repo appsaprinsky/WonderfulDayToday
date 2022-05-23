@@ -9,11 +9,11 @@ AI will analyse their history of stock prices and provide useful recommendations
 
 ## UI Example
 
-![This is an image](https://myoctocat.com/assets/images/base-octocat.svg)
+![This is an image](https://github.com/appsaprinsky/WonderfulDayToday/blob/main/images/1a.png)
 
-![This is an image](https://myoctocat.com/assets/images/base-octocat.svg)
+![This is an image](https://github.com/appsaprinsky/WonderfulDayToday/blob/main/images/2a.png)
 
-![This is an image](https://myoctocat.com/assets/images/base-octocat.svg)
+![This is an image](https://github.com/appsaprinsky/WonderfulDayToday/blob/main/images/3a.png)
 
 
 
