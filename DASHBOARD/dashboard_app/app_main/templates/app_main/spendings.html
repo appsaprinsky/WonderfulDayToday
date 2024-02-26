@@ -1,0 +1,109 @@
+{% extends "app_main/base_log_user.html" %}
+{% load static %}
+
+
+
+
+    <!-- TODOs -->
+{% block content %}
+
+    <!-- TODOs -->
+
+    <!-- Description -->
+    <div class="cards-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="above-heading">Add new Spendings</div>
+                    <h2 class="h2-heading">Click on button to add new Spending</h2>
+                    <a class="buttonlongtodo" href='{% url "spendings-add" %}'>Add Spending</a>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of cards-1 -->
+
+
+
+   <!-- SPENDINGS-->  
+    <div class="cards-1">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="above-heading">SPENDINGs</div>
+                    <h2 class="h2-heading">List of All SPENDINGs</h2>
+                </div> <!-- end of col -->
+            </div> <!-- end of row spendings-->
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="above-heading">Filter</div>
+                        <form action="" method="get">
+                            {{ filter.form.as_p }}
+                            <input type="submit" class="buttoninsidetodo" value="Filter"/>
+                        </form>
+                </div> <!-- end of col -->
+            </div> <!-- end of row spendings-->
+
+            <div class="row">
+                <div class="col-lg-12">
+                    {% for spend in object_list %}
+                    <!-- SPENDINGS -->
+                    <div class="spendings-group">
+                        <details class="spendings-individual">
+                        <summary>{{ spend.type }}: {{ spend.value }}</summary>
+                        <h2>{{ spend.titel }}</h2>
+                        <h5>{{ spend.importance }}</h5>
+                        <h5> {{ spend.type }} </h5>
+                        <h5> {{ spend.value }} </h5>
+                        <p>{{ spend.detailed_description }}</p>
+                        <p>{{ spend.date_of_spending }}</p>
+                        <a class="buttoninsidetodo" type="button" href='{% url "spendings-update" spend.pk %}'>Update</a>
+                        <a class="buttoninsidetodo" href='{% url "spendings-detail" spend.pk %}'>View</a>
+                        <a class="buttoninsidetodored" href='{% url "spendings-delete" spend.pk %}'>Delete</a>
+                        
+                        </details>
+                    </div>
+                    <!-- SPENDINGS  END-->
+                    {% empty %}
+                    <section class="grouptodos">
+                        <h2>No Spendings yet.</h2>
+                    </section>
+                    {% endfor %}
+
+                    {% if is_paginated %}
+                    {% if page_obj.has_previous %}
+                    <a href="{% if request.GET.key is not None %}{{ request.get_full_path }}&{% else %}?{% endif %}page=1" class="btn btn-outline-info mb-4">First</a>
+                    <a href="{% if request.GET.key is not None %}{{ request.get_full_path }}&{% else %}?{% endif %}page={{ page_obj.previous_page_number }}" class="btn btn-outline-info mb-4">Previous</a>
+                    {% endif %}
+
+                    {% for num in page_obj.paginator.page_range %}
+                    {% if page_obj.number == num %}
+                    <a href="{% if request.GET.key is not None %}{{ request.get_full_path }}&{% else %}?{% endif %}page={{ num }}" class="btn btn-info mb-4">{{ num }}</a>
+                    {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+                    <a href="{% if request.GET.key is not None %}{{ request.get_full_path }}&{% else %}?{% endif %}page={{ num }}" class="btn btn-outline-info mb-4">{{ num }}</a>
+                    {% endif %}
+                    {% endfor %}
+
+                    {% if page_obj.has_next %}
+                    <a href="{% if request.GET.key is not None %}{{ request.get_full_path }}&{% else %}?{% endif %}page={{ page_obj.next_page_number }}" class="btn btn-outline-info mb-4">Next</a>
+                    <a href="{% if request.GET.key is not None %}{{ request.get_full_path }}&{% else %}?{% endif %}page={{ page_obj.paginator.num_pages }}" class="btn btn-outline-info mb-4">Last</a>
+                    {% endif %}
+                    {% endif %}
+
+
+
+
+
+
+
+                    </div>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div>  <!-- end of container -->
+    </div> <!-- end of cards-1 -->
+
+   <!-- SPENDINGS END LIST--> 
+
+
+{% endblock content %}

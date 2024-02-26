@@ -1,0 +1,43 @@
+{% extends "app_main/base_log_user.html" %}
+{% load static %}
+
+
+
+
+    <!-- TODOs -->
+{% block content %}
+
+
+
+
+
+
+
+
+    <!-- Features -->
+    <div id="features" class="tabs">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="above-heading">AI support</div>
+                    <h2 class="h2-heading">Send AI Info</h2>
+                    <h2>Sent AI Info</h2>
+
+                        <form action="" method="POST">
+                          {% csrf_token %}
+                          {{ form }}
+                          <input type="file" name="csv_file" id="csv_file" required="True" class="form-control">
+                          <input type="submit" name="shortPrediction" value="Next Day Prediction" class="btn btn-success">
+                          <input type="submit" name="mediumPrediction" value="Next Month Prediction" class="btn btn-success">
+                          <input type="submit" name="longPrediction" value="Next Year Prediction" class="btn btn-success">
+                        </form>
+
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of tabs -->
+    <!-- end of features -->
+
+
+
+{% endblock content %}

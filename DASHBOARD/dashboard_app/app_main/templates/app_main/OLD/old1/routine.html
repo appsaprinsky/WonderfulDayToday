@@ -1,0 +1,37 @@
+<h1>Routine</h1>
+<ul>
+{% for rout in object_list %}
+    <li>{{ rout.time }} - {{ rout.titel }}  - {{ rout.importance }}  - {{ rout.detailed_description }} </li>
+    <a href='{% url "routine-detail" rout.pk %}'>+ View {{ rout.titel }}</a>
+    <a href='{% url "routine-update" rout.pk %}'>+ Update {{ rout.titel }}</a>
+    <a href='{% url "routine-delete" rout.pk %}'>+ Delete {{ rout.titel }}</a>
+
+
+{% empty %}
+    <li>No Routine yet.</li>
+{% endfor %}
+</ul>
+
+
+{% if is_paginated %}
+{% if page_obj.has_previous %}
+<a href="{% if request.GET.key is not None %}{{ request.get_full_path }}&{% else %}?{% endif %}page=1" class="btn btn-outline-info mb-4">First</a>
+<a href="{% if request.GET.key is not None %}{{ request.get_full_path }}&{% else %}?{% endif %}page={{ page_obj.previous_page_number }}" class="btn btn-outline-info mb-4">Previous</a>
+{% endif %}
+
+{% for num in page_obj.paginator.page_range %}
+{% if page_obj.number == num %}
+<a href="{% if request.GET.key is not None %}{{ request.get_full_path }}&{% else %}?{% endif %}page={{ num }}" class="btn btn-info mb-4">{{ num }}</a>
+{% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+<a href="{% if request.GET.key is not None %}{{ request.get_full_path }}&{% else %}?{% endif %}page={{ num }}" class="btn btn-outline-info mb-4">{{ num }}</a>
+{% endif %}
+{% endfor %}
+
+{% if page_obj.has_next %}
+<a href="{% if request.GET.key is not None %}{{ request.get_full_path }}&{% else %}?{% endif %}page={{ page_obj.next_page_number }}" class="btn btn-outline-info mb-4">Next</a>
+<a href="{% if request.GET.key is not None %}{{ request.get_full_path }}&{% else %}?{% endif %}page={{ page_obj.paginator.num_pages }}" class="btn btn-outline-info mb-4">Last</a>
+{% endif %}
+{% endif %}
+
+
+<a href='{% url "routine-add" %}'>+ Create New</a>

@@ -1,0 +1,35 @@
+{% extends "app_main/base_log_user.html" %}
+{% load static %}
+
+
+
+
+    <!-- TODOs -->
+{% block content %}
+
+
+
+
+
+
+
+
+    <!-- Features -->
+    <div id="features" class="tabs">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="above-heading">AI ANSWER</div>
+                    <h2 class="h2-heading">AI suggested:</h2>
+                    <h2>Stock Prices will go:</h2>
+                    <p> {{ prediction }}</p>
+
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of tabs -->
+    <!-- end of features -->
+
+
+
+{% endblock content %}

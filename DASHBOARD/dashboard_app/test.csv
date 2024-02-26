@@ -1,0 +1,24 @@
+ID,product_category,payment_method,shipping_cost,unit_price
+0,Car Parts,Credit Card,20,5000.01
+1,Car Parts,Cash,22,1034.01
+2,Math Book,Credit Card,10,6000.01
+3,Lego,Cash,23,500.01
+4,Lego,Debit Card,1,3424.01
+5,Math Book,Credit Card,1,600.01
+6,Car Parts,Cash,30,34034.01
+7,Statistic tool,Credit Card,22,4030.01
+8,Statistic tool,Cash,14,3400.01
+9,Math Book,Credit Card,10,2000.01
+10,Lego,Cash,8,3445.01
+11,Lego,Debit Card,7,4090.01
+12,Math Book,Credit Card,3,7777.01
+13,Statistic tool,Cash,8,333.01
+14,Math Book,Credit Card,33,4343.01
+15,Car Parts,Credit Card,2,500.01
+16,Statistic tool,Debit Card,44,1024.01
+17,Lego,Debit Card,54,800.01
+18,Statistic tool,Credit Card,35,545.01
+19,Car Parts,Debit Card,56,222.01
+20,Statistic tool,Debit Card,76,233.01
+21,Math Book,Credit Card,45,355.01
+22,Math Book,Cash,44,3534.01

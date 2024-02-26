@@ -1,0 +1,331 @@
+
+------Base------
+https://appseed.us/admin-dashboards/django-dashboard-black
+https://docs.djangoproject.com/en/4.0/topics/
+https://simpleisbetterthancomplex.com/tutorial/
+
+
+
+
+------Login------
+https://simpleisbetterthancomplex.com/tutorial/2017/02/18/how-to-create-user-sign-up-view.html
+https://www.nintyzeros.com/2020/06/login-register-user%20page-in%20django.html
+https://docs.djangoproject.com/en/4.0/topics/auth/default/
+https://www.smashingmagazine.com/2020/02/django-highlights-user-models-authentication/
+https://ordinarycoders.com/blog/article/django-user-register-login-logout
+
+
+------Connect Users with other Models------
+https://www.geeksforgeeks.org/how-to-use-user-model-in-django/
+https://www.geeksforgeeks.org/python-todo-webapp-using-django/
+
+
+------get user for model Models------
+https://stackoverflow.com/questions/59933636/i-try-store-user-id-in-django-admin-panel-like-laravel
+
+------Forms------
+https://stackoverflow.com/questions/63546367/not-null-constraint-failed-blog-userpost-user-id
+
+------Many-to-Many Models------
+https://docs.djangoproject.com/en/4.0/topics/db/examples/many_to_one/
+
+------Models------
+https://docs.djangoproject.com/en/4.0/ref/models/fields/
+https://stackoverflow.com/questions/31133963/multiple-models-generic-listview-to-template
+
+------Authentication------
+https://docs.djangoproject.com/en/4.0/topics/auth/default/
+
+
+------Mysql------
+https://www.programink.com/django-tutorial/django-models.html
+
+
+
+------Models: choice field------
+https://www.geeksforgeeks.org/how-to-use-django-field-choices/
+https://www.merixstudio.com/blog/django-models-declaring-list-available-choices-right-way/
+
+------Models: float field------
+https://stackoverflow.com/questions/13640320/how-to-set-default-value-for-floatfield-in-django-model
+
+
+------Logout------
+https://stackoverflow.com/questions/43069712/how-to-logout-in-django
+
+------Get specific data from model for ListView------
+https://stackoverflow.com/questions/38471260/django-filtering-by-user-id-in-class-based-listview
+https://stackoverflow.com/questions/28882837/django-generic-listview-filter-utilizing-current-user-id
+
+------Pagination------
+https://stackoverflow.com/questions/22734695/next-and-before-links-for-a-django-paginated-query
+
+------Multiple Queryset in List View------
+https://stackoverflow.com/questions/48872380/display-multiple-queryset-in-list-view
+
+------List View------
+https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Generic_views
+https://docs.djangoproject.com/en/4.0/ref/class-based-views/generic-display/#listview
+https://docs.djangoproject.com/en/4.0/ref/class-based-views/
+https://docs.djangoproject.com/en/4.0/ref/class-based-views/generic-display/
+
+
+------Model field references, CHOICES------
+https://docs.djangoproject.com/en/4.0/ref/models/fields/
+
+
+------ CRUD ------
+https://stackoverflow.com/questions/8594759/django-updateview-restrict-per-user
+https://www.geeksforgeeks.org/updateview-class-based-views-django/
+https://docs.djangoproject.com/en/4.0/ref/class-based-views/generic-editing/
+https://python-scripts.com/django-forms
+https://stackoverflow.com/questions/18329025/detailview-template-not-displaying-model-data
+
+
+-----Form-----
+https://stackoverflow.com/questions/16443029/cant-save-a-form-in-django-object-has-no-attribute-save
+
+
+------ CSS ------
+https://www.free-css.com/template-categories/app-or-application?start=60
+(Great Resource in General)
+https://www.softr.io/tools/svg-wave-generator
+(Great Resource in General)
+https://www.free-css.com/free-css-layouts/page16
+(Great Resource in General)
+http://htmlbook.ru/css/border
+https://stackoverflow.com/questions/17396771/how-do-i-make-two-divs-the-same-level
+
+
+https://www.free-css.com/free-css-templates/page264/lava
+(take paragraphs from there)
+https://www.free-css.com/free-css-templates/page273/digigram
+(take paragraphs from there)
+https://www.free-css.com/free-css-templates/page272/tivo
+(main used)
+https://www.free-css.com/free-css-templates/page168/patisserie
+(take paragraphs from there)
+
+https://unsplash.com/
+(free photo)
+https://www.rgbtohex.net/
+(RGB to HEX Color Converter)
+
+https://stackoverflow.com/questions/43274765/custom-checkbox-tick
+(Check Box)
+
+https://www.w3schools.com/colors/colors_picker.asp
+(Color Picker)
+
+https://www.w3schools.com/howto/howto_css_modals.asp
+(MODAL BOX)
+https://www.plus2net.com/javascript_tutorial/window-parent.php
+https://www.w3schools.com/jsref/prop_win_opener.asp
+
+https://www.google.com/search?q=%23696969&oq=%23696969&aqs=chrome..69i57.300j0j4&sourceid=chrome&ie=UTF-8
+https://bl.ocks.org/njvack/02ad8efcb0d552b0230d
+https://rgbacolorpicker.com/
+(Color Hex picker)
+
+(Button)
+https://www.w3schools.com/howto/howto_css_round_buttons.asp
+https://www.w3schools.com/tags/tag_button.asp
+https://www.w3schools.com/css/css3_buttons.asp
+
+(Overflow, ScrollBar)
+https://www.w3schools.com/cssref/pr_pos_overflow.asp
+https://stackoverflow.com/questions/24185558/adding-vertical-scrollbar-in-paragraph-inside-div
+https://stackoverflow.com/questions/25033382/text-goes-outside-containing-div/43736971
+https://stackoverflow.com/questions/12196885/text-flowing-out-of-div
+
+(details, summary)
+https://www.w3schools.com/tags/tag_details.asp
+http://jsfiddle.net/Ashish_developer/5jpyzkmt/
+https://stackoverflow.com/questions/26286462/toggle-view-of-list-elements-on-touch-devices
+https://enmascript.com/articles/2019/09/26/toggle-content-on-click-without-javascript
+https://enmascript.com/articles/2019/10/14/show-and-hide-content-on-click-with-just-html
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details
+
+(more css svg)
+https://svgwave.in/
+https://svgwave.in/
+https://meshgradient.in/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(python datetime)
+https://stackoverflow.com/questions/9724906/python-date-of-the-previous-month
+https://stackoverflow.com/questions/38794935/python-get-last-month-and-year?rq=1
+https://www.atemon.com/blog/get-the-previous-months-name
+https://techies-world.com/how-to-get-previous-month-in-python/
+https://stackoverflow.com/questions/12906402/type-object-datetime-datetime-has-no-attribute-datetime
+
+(django nav bar is_authenticated)
+https://stackoverflow.com/questions/41781104/how-to-display-specific-navbar-when-logged-in
+
+(django-filter)
+https://django-filter.readthedocs.io/en/latest/guide/usage.html#
+
+(django ordering)
+https://stackoverflow.com/questions/16082382/django-how-do-i-sort-on-date-from-two-models
+https://stackoverflow.com/questions/44996901/django-list-ordering-by-date
+https://stackoverflow.com/questions/40445793/django-just-sort-listview-by-date
+
+------ PAID SUBSCRIPTION DJANGO + STRIPE ------
+https://www.saaspegasus.com/guides/django-stripe-integrate/
+
+
+
+------DJANGO Chart js -----
+https://stackoverflow.com/questions/51103330/javascript-window-onload-function-not-loading-for-multiple-charts-with-chart-js
+https://stackoverflow.com/questions/5439901/getting-a-count-of-objects-in-a-queryset-in-django
+https://simpleisbetterthancomplex.com/tutorial/2020/01/19/how-to-use-chart-js-with-django.html
+https://www.section.io/engineering-education/integrating-chart-js-in-django/
+https://medium.com/geekculture/tutorial-display-charts-with-django-and-chart-js-cda3dcec7252
+https://stackoverflow.com/questions/36676263/chart-js-v2-hiding-grid-lines
+https://stackoverflow.com/questions/41953158/set-height-of-chart-in-chart-js
+https://www.chartjs.org/docs/2.9.4/charts/bar.html
+https://stackoverflow.com/questions/38743417/chart-js-change-color-of-bar
+https://www.chartjs.org/docs/latest/charts/bar.html
+https://tobiasahlin.com/blog/chartjs-charts-to-get-you-started/
+view-source:https://chartjs.bootcss.com/samples/charts/line/line-styles.html
+https://chartjs.bootcss.com/samples/charts/line/line-styles.html
+https://chartjs.bootcss.com/samples/
+https://wpdatatables.com/chart-js-examples/
+https://www.chartjs.org/docs/latest/charts/area.html
+https://www.youtube.com/watch?v=st2O-pvhWM4
+https://www.chartjs.org/docs/latest/general/colors.html
+
+
+
+
+
+
+----Django Filter Models ----
+https://stackoverflow.com/questions/6481279/django-sum-query
+https://stackoverflow.com/questions/54249017/distinct-on-fields-is-not-supported-by-this-database-backend
+https://stackoverflow.com/questions/5345639/aggregation-functions-returns-attributeerror-sum-object-has-no-attribute-loo
+https://stackoverflow.com/questions/10848809/django-model-get-distinct-value-list
+https://stackoverflow.com/questions/6576187/get-year-month-for-the-last-x-months
+https://stackoverflow.com/questions/14077799/django-filter-by-specified-month-and-year-in-date-range
+https://stackoverflow.com/questions/69035570/django-filter-by-date-range-but-exclude-the-year
+
+
+----Django FILTERS ----
+https://pypi.org/project/django-filter/
+https://stackoverflow.com/questions/59480402/how-to-use-django-filter-with-a-listview-class-view-for-search
+https://evileg.com/ru/post/350/
+
+
+
+
+----Django FILTERS PAGINATION ----
+https://www.caktusgroup.com/blog/2018/10/18/filtering-and-pagination-django/
+https://stackoverflow.com/questions/61653382/django-pagination-problem-pages-not-getting-paginated
+https://stackoverflow.com/questions/52368636/django-pagination-not-working-with-django-filter/52444764
+
+
+
+
+------DJANGO FILE MANAGER -----
+https://simpleisbetterthancomplex.com/tutorial/2016/08/01/how-to-upload-files-with-django.html
+https://stackabuse.com/handling-file-uploads-with-django/
+https://stackoverflow.com/questions/12893412/django-upload-file-per-user-relationship-error
+https://stackoverflow.com/questions/16041232/django-delete-filefield
+
+https://stackoverflow.com/questions/9143262/delete-multiple-objects-in-django
+
+
+https://docs.djangoproject.com/en/4.0/topics/http/file-uploads/
+https://docs.djangoproject.com/en/4.0/ref/files/uploads/#django.core.files.uploadedfile.UploadedFile
+https://medium.com/analytics-vidhya/deploying-machine-learning-models-using-django-c461582a9f1e
+https://towardsdatascience.com/from-scripts-to-prediction-api-2372c95fb7c7
+https://pythoncircle.com/post/30/how-to-upload-and-process-the-csv-file-in-django/
+
+https://stackoverflow.com/questions/62912039/uploading-csv-file-django-using-a-form
+
+https://stackoverflow.com/questions/55895975/reading-uploaded-csv-file-into-pandas-dataframe
+https://docs.djangoproject.com/en/4.0/topics/http/file-uploads/
+https://stackoverflow.com/questions/64553214/django-uploaded-file-doesnt-process
+
+
+https://stackoverflow.com/questions/70897970/django-how-to-upload-csv-file-using-form-to-populate-postgres-database-and-displ
+https://stackoverflow.com/questions/17294242/django-uploading-files-for-user
+https://stackoverflow.com/questions/34239877/django-save-user-uploads-in-seperate-folders
+https://stackoverflow.com/questions/30679661/how-to-create-separate-folder-for-each-user-in-django-and-let-user-upload-file-i
+https://stackoverflow.com/questions/24146619/django-user-specific-folders/24146732
+https://forum.djangoproject.com/t/filefield-upload-files-creating-many-duplicates-files-in-the-media-directory/5666
+
+
+
+
+
+
+------DJANGO Deploy Model -----
+
+https://stackoverflow.com/questions/53691100/deploying-machine-learning-models-in-django
+
+
+
+----DJANGO DEPLOY MYSQL-----
+https://help.pythonanywhere.com/pages/MySQLBackupRestore/
+(access)
+https://help.pythonanywhere.com/pages/AccessingMySQLFromOutsidePythonAnywhere/
+(access)
+https://www.pythonanywhere.com/forums/topic/2371/
+(access)
+
+
+
+https://help.pythonanywhere.com/pages/SecuringYourAccount/
+https://help.pythonanywhere.com/pages/UsingMySQL/#:~:text=To%20start%20using%20MySQL%2C%20you,ability%20to%20create%20new%20databases.&text=In%20this%3A,to%20log%20in%20to%20PythonAnywhere
+https://www.youtube.com/watch?v=bfAtGBsrqt4
+https://www.youtube.com/results?search_query=PythonAnywhere+Django+mysql
+
+
+https://www.youtube.com/watch?v=qGOmtF5fUOU
+
+
+https://www.pythonanywhere.com/forums/topic/28341/
+https://help.pythonanywhere.com/pages/UsingMySQL/
+https://docs.djangoproject.com/en/4.0/ref/databases/#mysql-sql-mode
+https://stackoverflow.com/questions/64588187/warnings-mysql-w002
+https://overcoder.net/q/1099028/%D0%BA%D0%B0%D0%BA-%D0%BD%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B8%D1%82%D1%8C-%D0%B1%D0%B0%D0%B7%D1%83-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85-django-mysql-%D0%BD%D0%B0-pythonanywhere
+https://help.pythonanywhere.com/pages/environment-variables-for-web-apps
+
+https://stackoverflow.com/questions/43805957/pythonanywhere-the-secret-key-setting-must-not-be-empty
+
+
+
+----DJANGO DEPLOY SECURITY -----
+https://www.digitalocean.com/community/tutorials/how-to-harden-your-production-django-project
+
+(MAIN)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

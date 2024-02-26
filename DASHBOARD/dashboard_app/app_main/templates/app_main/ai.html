@@ -1,0 +1,93 @@
+{% extends "app_main/base_log_user.html" %}
+{% load static %}
+
+
+
+
+    <!-- TODOs -->
+{% block content %}
+
+
+
+
+
+
+
+
+    <!-- Features -->
+    <div id="features" class="tabs">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="above-heading">AI support</div>
+                    <h2 class="h2-heading">Send AI Info</h2>
+                    <h2>Sent AI Info</h2>
+
+                        <form action="" method="POST" enctype="multipart/form-data">
+                          {% csrf_token %}
+                          {% for entry in form %}
+                           <div>
+                                {{ entry.label_tag }}
+                           </div>
+                           <div>
+                               {{entry}}
+                           </div>
+                          {% endfor %}
+
+                          <input type="submit" name="shortPrediction" value="Next Month Prediction" class="btn btn-success">
+
+                        </form>
+
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of tabs -->
+    <!-- end of features -->
+
+
+
+   <!-- INSTRUCTIONS-->
+    <div class="cards-1">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="above-heading"></div>
+                    <h2 class="h2-heading">INSTRUCTIONS</h2>
+                </div> <!-- end of col -->
+            </div> <!-- end of row-->
+
+
+
+            <div class="row">
+                <div class="col-lg-12">
+
+                    <div class="spendings-group">
+                        <details class="instructions-individual">
+                        <summary>Instructions: for AI</summary>
+                        <h2>Currently no model upload to a server, so it is only random predictions generators! </h2>
+                        <br>
+                        <br>
+                        <br>
+
+                        <h5>Upload a file only with a name 'file.csv'  !!! </h5>
+
+                        <p> Inside a file you should have one column without index!</p>
+                        <p> This Column should have Average price for a month for a particular stock for 10 month in a decreasing order.</p>
+                        <p> Name of a Column should be Stock.</p>
+                        <p> So in Total you should have 11 row and 1 column.</p>
+                        </details>
+                    </div>
+
+
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div>  <!-- end of container -->
+    </div> <!-- end of cards-1 -->
+
+   <!--  END-->
+
+
+
+
+{% endblock content %}

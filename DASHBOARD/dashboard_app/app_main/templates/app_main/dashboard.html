@@ -1,0 +1,307 @@
+{% extends "app_main/base_dashboard.html" %}
+{% load static %}
+
+
+
+
+    <!-- TODOs -->
+{% block content %}
+    
+    <!-- end of header -->
+
+
+  <div class="wrapper">
+    <div class="main-panel">
+      <div class="content">
+
+        <div class="row">
+
+          <div class="col-12">
+            <div class="dashboard-graph-1">
+              <div class="card-header ">
+                <div class="row">
+                  <div class="col-sm-6 text-left">
+                    <h5 class="card-category">Total Spendings</h5>
+                    <h2 class="card-title">Last 6 months</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="chart-area">
+                  <canvas id="myAreaChart222"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+
+          <div class="col-12">
+            <div class="dashboard-graph-2">
+              <div class="card-header ">
+                <div class="row">
+                  <div class="col-sm-6 text-left">
+                    <h5 class="card-category">Total ToDos</h5>
+                    <h2 class="card-title">Summary for all 4 type</h2>
+                  </div>
+                  <div class="col-sm-6">
+                  
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="chart-area">
+                  <canvas id="myAreaChart" style="height: 55%; width: 55%; display: block; overflow: scroll;"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="row">
+
+          <div class="col-lg-4">
+            <div class="card-card-chart-dashboard">
+              <div class="card-header">
+                <h5 class="card-category">Long Run Goals</h5>
+                <h3 class="card-title"><i class="tim-icons icon-bell-55 text-primary"></i> {{Long_Run_num}}</h3>
+              </div>
+              <div class="card-body">
+                <div class="chart-area">
+                  <div class="todoslong" style="overflow: scroll;">
+                    {% for todo_l in Long_Run %}
+                    <div class="dashboard-list-long">
+                      <section class="dashboard-list-long-section">
+                        <p>{{ todo_l.titel }}: {{ todo_l.deadline_date }} <a class="buttoninsidetodo" href='{% url "to-do-detail" todo_l.pk %}'>View</a></p>
+                      </section>
+                    </div>
+                    {% empty %}
+                    <section class="grouptodos">
+                      <h2>No Long TO DOs yet.</h2>
+                    </section>
+                    {% endfor %}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="col-lg-4">
+            <div class="card-card-chart-dashboard">
+              <div class="card-header">
+                <h5 class="card-category">Medium Run Goals</h5>
+                <h3 class="card-title"><i class="tim-icons icon-delivery-fast text-info"></i> {{Medium_Run_num}}</h3>
+              </div>
+              <div class="card-body">
+                <div class="chart-area">
+                  <div class="todoslong" style="overflow: scroll;">
+                    {% for todo_m in Medium_Run %}
+                    <div class="dashboard-list-long">
+                      <section class="dashboard-list-long-section">
+                        <p>{{ todo_m.titel }}: {{ todo_m.deadline_date }} <a class="buttoninsidetodo" href='{% url "to-do-detail" todo_m.pk %}'>View</a></p>
+                      </section>
+                    </div>
+                    {% empty %}
+                    <section class="grouptodos">
+                      <h2>No Medium TO DOs yet.</h2>
+                    </section>
+                    {% endfor %}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="col-lg-4">
+            <div class="card-card-chart-dashboard">
+              <div class="card-header">
+                <h5 class="card-category">Short Run Goals</h5>
+                <h3 class="card-title"><i class="tim-icons icon-send text-success"></i> {{Short_Run_num}} </h3>
+              </div>
+              <div class="card-body">
+                <div class="chart-area">
+                  <div class="todoslong" style="overflow: scroll;">
+                    {% for todo_s in Short_Run %}
+                    <div class="dashboard-list-long">
+                      <section class="dashboard-list-long-section">
+                        <p>{{ todo_s.titel }}: {{ todo_s.deadline_date }} <a class="buttoninsidetodo" href='{% url "to-do-detail" todo_s.pk %}'>View</a></p>
+                      </section>
+                    </div>
+                    {% empty %}
+                    <section class="grouptodos">
+                      <h2>No Short TO DOs yet.</h2>
+                    </section>
+                    {% endfor %}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+
+
+
+
+        <div class="row">
+          <div class="col-lg-6 col-md-12">
+            <div class="card-card-chart-dashboard-pie">
+              <div class="card-header">
+                <h5 class="card-category">Pie Chart Spendings per category</h5>
+              </div>
+              <div class="card-body">
+                <div class="chart-area">
+                  <canvas id="pie-chart"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  {% endblock content %}
+
+  {% block javascripts %}
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+  <script>
+    var ctx = document.getElementById("pie-chart");
+    var config = {
+      type: 'pie',
+      data: {
+        datasets: [{
+          data: {{ data_spend|safe }},
+          backgroundColor: [
+            '#4821d1', '#d12133', '#21d162', '#f1f52a', '#b42af5', '#3900ff', '#ff7a88', '#ace8c2', '#fdff8f', '#d9b5eb', '#fc813a'
+          ],
+          label: 'Spendings Types'
+        }],
+        labels: {{ labels_spend|safe }}
+      },
+      options: {
+        responsive: true
+      }
+    };
+
+
+
+
+
+
+
+
+    var ctx1 = document.getElementById("myAreaChart");
+    var myLineChart = new Chart(ctx1, {
+      type: 'bar',
+      data: {
+        labels: {{ labels_todo|safe }},
+        datasets: [{
+          label: "ToDos types",
+          backgroundColor: [
+            '#4821d1', '#d12133', '#21d162', '#f1f52a', '#b42af5'
+          ],
+
+          borderColor: "rgba(78, 115, 223, 1)",
+          pointRadius: 3,
+          pointBackgroundColor: "rgba(78, 115, 223, 1)",
+          pointBorderColor: "rgba(78, 115, 223, 1)",
+          pointHoverRadius: 3,
+          pointHoverBackgroundColor: "rgba(78, 115, 223, 1)",
+          pointHoverBorderColor: "rgba(78, 115, 223, 1)",
+          pointHitRadius: 10,
+          pointBorderWidth: 2,
+          data: {{ data_todo|safe }},
+        }],
+      },
+      
+      options: {
+        scales: {
+          xAxes: [{
+              gridLines: {
+                  display:false
+              }
+          }],
+          yAxes: [{
+              gridLines: {
+                  display:false
+              }   
+          }]
+      },
+    }  
+  });
+
+
+
+
+
+
+
+    var ctx222 = document.getElementById("myAreaChart222");
+    var myLineChart222 = new Chart(ctx222, {
+      type: 'line',
+      data: {
+        labels: {{ labels_6month|safe }},
+        datasets: [{
+          label: "Spendings",
+          backgroundColor: 'rgb(75, 192, 192, 1)',
+          fill: true,
+          tension: 0.4,
+          borderColor: "rgba(78, 115, 223, 1)",
+          pointRadius: 3,
+          pointBackgroundColor: "rgba(78, 115, 223, 1)",
+          pointBorderColor: "rgba(78, 115, 223, 1)",
+          pointHoverRadius: 3,
+          pointHoverBackgroundColor: "rgba(78, 115, 223, 1)",
+          pointHoverBorderColor: "rgba(78, 115, 223, 1)",
+          pointHitRadius: 10,
+          pointBorderWidth: 2,
+          data: {{ data_6month|safe }},
+        }],
+      },
+      
+      options: {
+        responsive: true,
+        scales: {
+          xAxes: [{
+              gridLines: {
+                  display:false
+              }
+          }],
+          yAxes: [{
+              gridLines: {
+                  display:false
+              }   
+          }]
+      },
+    }  
+  });
+
+
+
+    window.onload = function() {
+      window.myPie = new Chart(ctx, config);
+      window.myLine = new Chart(ctx1, myLineChart);
+      window.myLine222 = new Chart(ctx222, myLineChart222);
+    };
+
+  </script>
+{% endblock javascripts %}
+
+
+
+
+
+
+

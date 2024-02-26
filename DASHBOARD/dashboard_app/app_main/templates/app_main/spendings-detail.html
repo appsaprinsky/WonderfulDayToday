@@ -1,0 +1,47 @@
+{% extends "app_main/base_log_user.html" %}
+{% load static %}
+
+
+
+{% block content %}
+
+
+
+
+
+    <!-- Features -->
+    <div id="features" class="tabs">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="above-heading">FEATURES</div>
+                    <h2 class="h2-heading">Detail SPENDING</h2>
+                    <div class="to-do-detail-view">
+                        <div class='post-entry'>
+                            <h2>Type:</h2>
+                            <p>{{ object.type }}</p>
+                            <h2>Value:</h2>
+                            <p>{{ object.value }}</p>
+                            <h2>Title:</h2>
+                            <p>{{ object.titel }}</p>
+                            <h2>Importance:</h2>
+                            <p>{{ object.importance }}</p>
+                            <h2>Date of Spending:</h2>
+                            <p>{{ object.date_of_spending }}</p>                            
+                            <h2>Detailed description:</h2>
+                            <p>{{ object.detailed_description }}</p>
+                        </div>
+                    </div>
+
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of tabs -->
+    <!-- end of features -->
+
+
+
+
+
+
+{% endblock content %}
